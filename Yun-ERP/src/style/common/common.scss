@@ -1,0 +1,58 @@
+$font-stack: Helvetica, sans-serif;
+$text-color: #0E0C0F;
+$bgcolor: whitesmoke;
+$color-header: linear-gradient(#304156, #304156);
+$color-primary: #304156;
+
+body {
+  font: 100% $font-stack;
+  color: $text-color;
+}
+
+.themefont-color {
+  color: $color-primary;
+}
+
+input[type='checkbox'] {
+  vertical-align: middle;
+  margin-top: 0;
+}
+
+.thin-gray {
+  color: gray;
+  font-size: 12px !important;
+  font-weight: 100;
+}
+
+.bg-whitesmoke {
+  background-color: whitesmoke;
+}
+
+.mg-b10{
+  margin-bottom:10px;
+}
+
+.mg-lr5 {
+  margin:0 5px;
+}
+
+.mg-r10{
+  margin-right:10px;
+}
+
+.mg-r20 {
+  margin-right: 20px;
+}
+
+li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.pd-t20 {
+  padding-top: 20px;
+}
+
+.pd-l15 {
+  padding-left: 15px;
+}
