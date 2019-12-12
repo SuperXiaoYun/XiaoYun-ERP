@@ -12,8 +12,8 @@ export default {
                     plantformname: '享吗',
                 },
                 {
-                    name: '1230005',
-                    imgurl: '享吗',
+                    id: '1230005',
+                    plantformname: '享吗',
                 }
             ]
         }

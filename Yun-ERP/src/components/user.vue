@@ -26,14 +26,14 @@
         <li v-for="item in userList" style="list-style: none;height: 70px;">
           <table style="width: 100%;" bgcolor="white">
             <tr style="height: 60px;">
-              <td style="text-align: left;">
+              <td style="text-align: center;">
                 <span>{{item.id}}</span>
               </td>
-              <td style="text-align: left;">
+              <td style="text-align: center;">
                 <span>{{item.plantformname}}</span>
               </td>
               <td>
-                <span>>>更多用户信息</span>
+                <span>>>更多信息</span>
               </td>
             </tr>
           </table>

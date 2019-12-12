@@ -17,9 +17,7 @@ const routes = [{
     name: 'User',
     component: User
 },
-
 ];
-
 
 // 页面刷新时，重新赋值token
 if (window.localStorage.getItem('token')) {
@@ -46,5 +44,4 @@ router.beforeEach((to, from, next) => {
         next();
     }
 })
-
 export default router;
