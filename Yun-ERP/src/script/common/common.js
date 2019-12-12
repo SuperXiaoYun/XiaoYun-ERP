@@ -88,6 +88,8 @@ Array.prototype.remove = function (val) {
   }
 };
 
+String.prototype.pageTitle = '';
+
 class commonTools {
   constructor() {
   }

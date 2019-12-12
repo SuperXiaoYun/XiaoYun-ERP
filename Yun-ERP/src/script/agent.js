@@ -7,18 +7,21 @@ export default {
             currentPlatform: {},
             selectStatus: false,
             currentStatus: {},
-            userList: [
+            agentList: [
                 {
                     id: 1,
-                    plantformname: '享吗'
+                    phone: '18976579009',
+                    name: 'agent1',
                 },
                 {
-                    id: 2,
-                    plantformname: '享吗'
+                    id: 1,
+                    phone: '18976579009',
+                    name: 'agent1',
                 },
                 {
-                    id: 3,
-                    plantformname: '享吗'
+                    id: 1,
+                    phone: '18976579009',
+                    name: 'agent1',
                 }
             ]
         }
@@ -44,9 +47,9 @@ export default {
         loadMore() {
             this.loading = true;
             setTimeout(() => {
-                let last = this.orderList[this.orderList.length - 1];
+                let last = this.agentList[this.orderList.length - 1];
                 for (let i = 1; i <= 10; i++) {
-                    this.orderList.push(last);
+                    this.agentList.push(last);
                 }
                 this.loading = false;
             }, 2500);

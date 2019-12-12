@@ -1,7 +1,7 @@
 <style lang="scss" scoped>
-@import "@/style/user.scss";
+@import "@/style/agent.scss";
 </style>
-<script src="@/script/user.js"></script>
+<script src="@/script/agent.js"></script>
 <template>
   <div id="div_order">
     <div class="select" @click="selectPlatform = true">
@@ -46,7 +46,7 @@
       infinite-scroll-distance="10"
       style="position: relative;left: -20px;"
     >
-      <li v-for="item in userList" style="list-style: none;height: 70px;">
+      <li v-for="item in agentList" style="list-style: none;height: 70px;">
         <table style="width: 100%;" bgcolor="white">
           <tr style="height: 60px;">
             <td style="text-align: left;">
@@ -57,12 +57,15 @@
             </td>
             <td style="text-align: left;">
               <span>
-                {{item.plantformname}}
+                {{item.phone}}
                 <br />
               </span>
             </td>
             <td>
-              <span>用户详情</span>
+              <span>
+                {{item.name}}
+                <br />
+              </span>
             </td>
           </tr>
         </table>
