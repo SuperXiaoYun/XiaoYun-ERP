@@ -2,60 +2,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '@/script/store/store'
 import * as types from '@/script/store/types'
-import Personal from '@/components/personalCenter'
-import TeamBuilding from '@/components/teamBuilding'
-import OrderDetail from '@/components/orderDetail'
-import Home from '@/components/home'
-import Login from '@/components/login'
-import Register from '@/components/register'
-import AgentMerchant from '@/components/agentMerchant'
+import ProductIndex from '@/components/ProductIndex'
+import User from '@/components/User'
 
 Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'ProductIndex',
+    component: ProductIndex
 },
 {
-    path: '/login',
-    name: 'login',
-    component: Login
+    path: '/user',
+    name: 'User',
+    component: User
 },
-{
-    path: '/personal',
-    name: 'Personal',
-    component: Personal,
-    meta: {
-        requireAuth: true,
-    }
-},
-{
-    path: '/teamBuilding',
-    name: 'Team Building',
-    component: TeamBuilding,
-    meta: {
-        requireAuth: true,
-    }
-},
-{
-    path: '/orderDetail',
-    name: 'Order Detail',
-    component: OrderDetail,
-    meta: {
-        requireAuth: true,
-    }
-},
-{
-    path: '/register',
-    name: 'Register',
-    component: Register,
-},
-{
-    path: '/agentMerchant',
-    name: 'AgentMerchant',
-    component: AgentMerchant,
-}
+
 ];
 
 
