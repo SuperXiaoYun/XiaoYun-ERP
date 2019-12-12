@@ -4,20 +4,43 @@ import store from '@/script/store/store'
 import * as types from '@/script/store/types'
 import ProductIndex from '@/components/ProductIndex'
 import User from '@/components/User'
+import OrderList from '@/components/OrderList'
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'ProductIndex',
-    component: ProductIndex
-},
-{
+    component: ProductIndex,
+    meta: {
+      requireAuth: true,
+    }
+  },
+  {
     path: '/user',
     name: 'User',
-    component: User
-},
-
+    component: User,
+    meta: {
+      requireAuth: true,
+    }
+  },
+  {
+    path: '/order',
+    name: 'Order List',
+    component: OrderList,
+    meta: {
+      requireAuth: true,
+    }
+  },
+  {
+    path: '/personal',
+    name: 'Order List',
+    component: OrderList,
+    meta: {
+      requireAuth: true,
+    }
+  },
 ];
 
 
@@ -31,20 +54,20 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some(r => r.meta.requireAuth)) {
-        if (store.state.token) {
-            next();
-        } else {
-            if (from.name == 'login')
-                return;
-            next({
-                path: '/login',
-                query: { redirect: to.fullPath }
-            })
-        }
+  if (to.matched.some(r => r.meta.requireAuth)) {
+    if (store.state.token) {
+      next();
     } else {
-        next();
+      if (from.name == 'login')
+        return;
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath }
+      })
     }
+  } else {
+    next();
+  }
 })
 
 export default router;
